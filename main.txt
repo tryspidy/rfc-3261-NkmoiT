@@ -1,0 +1,56 @@
+
+RFC 3261            SIP: Session Initiation Protocol           June 2002
+
+
+         the set of proxies that need to be visited along the way
+         (present in the Route header field).  A proxy compliant to
+         these mechanisms is also known as a loose router.
+
+      Message: Data sent between SIP elements as part of the protocol.
+         SIP messages are either requests or responses.
+
+      Method: The method is the primary function that a request is meant
+         to invoke on a server.  The method is carried in the request
+         message itself.  Example methods are INVITE and BYE.
+
+      Outbound Proxy: A proxy that receives requests from a client, even
+         though it may not be the server resolved by the Request-URI.
+         Typically, a UA is manually configured with an outbound proxy,
+         or can learn about one through auto-configuration protocols.
+
+      Parallel Search: In a parallel search, a proxy issues several
+         requests to possible user locations upon receiving an incoming
+         request.  Rather than issuing one request and then waiting for
+         the final response before issuing the next request as in a
+         sequential search, a parallel search issues requests without
+         waiting for the result of previous requests.
+
+      Provisional Response: A response used by the server to indicate
+         progress, but that does not terminate a SIP transaction.  1xx
+         responses are provisional, other responses are considered
+         final.
+
+      Proxy, Proxy Server: An intermediary entity that acts as both a
+         server and a client for the purpose of making requests on
+         behalf of other clients.  A proxy server primarily plays the
+         role of routing, which means its job is to ensure that a
+         request is sent to another entity "closer" to the targeted
+         user.  Proxies are also useful for enforcing policy (for
+         example, making sure a user is allowed to make a call).  A
+         proxy interprets, and, if necessary, rewrites specific parts of
+         a request message before forwarding it.
+
+      Recursion: A client recurses on a 3xx response when it generates a
+         new request to one or more of the URIs in the Contact header
+         field in the response.
+
+      Redirect Server: A redirect server is a user agent server that
+         generates 3xx responses to requests it receives, directing the
+         client to contact an alternate set of URIs.
+
+
+
+
+
+
+Rosenberg, et. al.          Standards Track                    [Page 23]
